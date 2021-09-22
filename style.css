@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    background: rgb(44, 65, 90);
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+header,form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+form button{
+    color:rgb(32, 48, 66);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    color: white;
+    background: rgb(17, 26, 36);
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.check-btn, .delete-btn{
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.check-btn{
+    background: rgb(4, 114, 4);
+}
+
+.delete-btn{
+    background: rgb(202, 11, 11);
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none;
+}
+
+.checked{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    width: 10rem;
+    color: rgb(32, 48, 66);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: rgb(17, 26, 36);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.3rem;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background: white;
+    color: rgb(17, 26, 36);
+    transition: all 0.5s ease;
+}
+
+::selection{
+    background: rgb(17, 26, 36);
+    color: white;
+}
